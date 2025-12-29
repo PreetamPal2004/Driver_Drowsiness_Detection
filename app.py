@@ -51,5 +51,7 @@ class VideoProcessor(VideoProcessorBase):
 webrtc_streamer(
     key="drowsy",
     rtc_configuration=RTC_CONFIGURATION,
-    video_processor_factory=VideoProcessor
+    video_processor_factory=VideoProcessor,
+    media_stream_constraints={"video": True, "audio": False},
 )
+
