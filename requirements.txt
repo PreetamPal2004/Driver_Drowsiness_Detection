@@ -1,0 +1,10 @@
+streamlit
+streamlit-webrtc
+opencv-python-headless
+numpy
+av      
+mediapipe
+tensorflow
+pygame
+ultralytics
+
