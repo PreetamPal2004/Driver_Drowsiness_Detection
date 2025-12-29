@@ -12,8 +12,18 @@ IMG_SIZE = 32
 
 # WebRTC config for browser camera
 RTC_CONFIGURATION = RTCConfiguration(
-    {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
+    {
+        "iceServers": [
+            {"urls": ["stun:stun.l.google.com:19302"]},
+            {
+                "urls": "turn:relay1.expressturn.com:3478",
+                "username": "efBFu6Zq0pkj2PVa7W2drGqmH0Sg5N52dQq8QYykn2Fi2NfQN3", # free public TURN
+                "credential": "7TntjQzJQz4pUCrrvMbSGI11y5uj1Ta9"
+            },
+        ]
+    }
 )
+
 
 st.title("🚗 Driver Drowsiness & Yawn Detection (Web Version)")
 st.write("Camera will run in browser, not on server. Works on Streamlit Cloud.")
